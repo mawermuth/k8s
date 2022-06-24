@@ -1,0 +1,32 @@
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: myingress
+#   labels:
+#     name: myingress
+# spec:
+#   rules:
+#   - host: primary.host.com.br
+#     http:
+#       paths:
+#       - pathType: Prefix
+#         path: "/mid1"
+#         backend:
+#           service:
+#             name: middleware-1
+#             port: 
+#               number: 3001
+#       - pathType: Prefix
+#         path: "/mid2"
+#         backend:
+#           service:
+#             name: middleware-2
+#             port: 
+#               number: 3002
+#       - pathType: Prefix
+#         path: "/back"
+#         backend:
+#           service:
+#             name: backend
+#             port: 
+#               number: 3003
