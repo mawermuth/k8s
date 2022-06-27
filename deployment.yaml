@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: zrpapi
+  name: accessapi
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: zrpapi
+      app: accessapi
   template:
     metadata:
       labels:
-        app: zrpapi
+        app: accessapi
     spec:
       containers:
-      - name: zrpapi
-        image: wermuth/zrp_api:latest
+      - name: accessapi
+        image: wermuth/access_api:latest
         ports:
         - containerPort: 3000
