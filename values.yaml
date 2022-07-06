@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: wermuth/access_api
+  repository: wermuth/force-cpu-usage
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
