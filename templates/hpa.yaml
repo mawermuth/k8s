@@ -11,7 +11,7 @@ spec:
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:
-    - type: Resource
+  - type: Resource
     resource:
       name: cpu
       target:
