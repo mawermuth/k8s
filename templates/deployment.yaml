@@ -3,17 +3,22 @@ kind: Deployment
 metadata:
   name: {{ .Values.nameOverride }}
 spec:
-  replicas: 1
   selector:
     matchLabels:
-      app: {{ .Values.nameOverride }}
+      run: {{ .Values.nameOverride }}
+  replicas: 1
   template:
     metadata:
       labels:
-        app: {{ .Values.nameOverride }}
+        run: {{ .Values.nameOverride }}
     spec:
       containers:
       - name: {{ .Values.nameOverride }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         ports:
         - containerPort: {{ .Values.service.targetPort }}
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
