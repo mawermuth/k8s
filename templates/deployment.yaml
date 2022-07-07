@@ -5,12 +5,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      run: {{ .Values.nameOverride }}
+      app: {{ .Values.nameOverride }}
   replicas: 1
   template:
     metadata:
       labels:
-        run: {{ .Values.nameOverride }}
+        app: {{ .Values.nameOverride }}
     spec:
       containers:
       - name: {{ .Values.nameOverride }}

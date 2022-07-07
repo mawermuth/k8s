@@ -17,10 +17,4 @@ spec:
       target:
         type: Utilization
         averageUtilization: {{ .Values.autoscaling.targetCPUUtilizationPercentage }}
-  - type:
-    resource:
-      name: memory
-      target:
-        type: Utilization
-        averageUtilization: {{ .Values.autoscaling.targetCPUUtilizationPercentage }}
 {{- end }}
